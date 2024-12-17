@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+  {% load static %} <!-- Load the static tag at the top of the block content -->
+
+  <section class="about-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="display-4 text-primary">About Chandragiri Dental Clinic</h2>
+          <p class="lead mt-3">Located in Udma, Kasaragod, Chandragiri Dental Clinic offers high-quality dental care in a welcoming and comfortable environment. Our team of experienced dentists is dedicated to providing the best dental services for you and your family.</p>
+          <p class="mt-4">We are open 6 days a week, providing a wide range of services, including routine check-ups, preventive care, and emergency dental treatments. Our clinic is closed on Sundays to give our team a well-deserved break.</p>
+          <p class="mt-4">Appointments can be easily booked by calling us directly at <strong>07947145010</strong>. We strive to offer convenient and timely service for all our patients.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'images/dental-clinic.jpg' %}" class="img-fluid rounded" alt="Dental Clinic Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="working-hours py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center text-primary mb-4">Our Working Hours</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Monday - Saturday:</strong> 9:00 AM - 6:00 PM</li>
+            <li class="list-group-item"><strong>Sunday:</strong> Closed</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-center text-primary">Contact Us</h4>
+          <p class="text-center">For appointments and inquiries, please call us at <strong>07947145010</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+li:hover {
+    background-color: gray;
+    border-radius: 10px;
+    border: 1px solid yellow;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f8d210; /* Accent color for hover effect */
+}

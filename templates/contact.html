@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title%}
+Contact Us
+{% endblock %}
+
+{% block content%}
+<div class="container mt-5">
+    <h1 class="text-center text-primary">Contact Us</h1>
+    <hr>
+    <div class="row my-5">
+        <!-- Contact Information -->
+        <div class="col-md-6">
+            <h2 class="text-secondary">Reach Us</h2>
+            <p><strong>Chandragiri Dental Clinic</strong></p>
+            <p>Udma, Kasaragod, Kerala, 671319</p>
+            <p><i class="fas fa-phone-alt"></i> +91 07947145010</p>
+            <p><i class="fas fa-envelope"></i> info@chandragiridentalclinic.com</p>
+        </div>
+
+        <!-- Google Map -->
+        <div class="col-md-6">
+            <h2 class="text-secondary">Our Location</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0914908351857!2d75.02593791578807!3d12.506438291622154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba440ad3c96fb67%3A0x854715f3c7bde729!2sKasaragod%2C%20Kerala%20671319!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-secondary text-center">Send Us a Message</h2>
+            <form action="" method="POST" class="p-4 bg-light rounded shadow-sm">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
